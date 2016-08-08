@@ -418,6 +418,9 @@ define("tinymce/ui/Window", [
 
 			windows.push(self);
 			toggleFullScreenState(true);
+			if (this.settings.postRenderCallback) {
+				this.settings.postRenderCallback(this);
+			}
 		},
 
 		/**
